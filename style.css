@@ -69,7 +69,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 80px;
+  font-size: 50px;
   color: #7E57C2;
   animation: pop 1s ease-out forwards;
 }
@@ -93,7 +93,7 @@
 
 @keyframes buttonSlide {
   to {
-    bottom: 70px;
+    bottom: 85px;
   }
 }
 
