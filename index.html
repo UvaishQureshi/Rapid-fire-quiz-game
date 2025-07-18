@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rapid fire quiz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="homePage">
+    <img class="photo" src="Brain.png" />
+    <div class="shade">
+      <div class="card">
+        <h6>
+          Rapid Fire <br />
+          <span>Quiz <br />
+            Game!
+        </h6>
+      </div>
+      <div class="BUTTON">
+        <button onclick="changePage('homePage','none','rulesPage','flex')">
+          Start
+        </button>
+        <a href="https://uvaishqureshi.github.io/My-Portfolio/">
+          <button>
+            About me
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div id="rulesPage">
+    <img class="photo" src="bulb.png" />
+    <div class="shade">
+      <div class="card">
+        <h4>
+          ☆ Rules ☆
+        </h4>
+        <hr />
+        <ul>
+          <li>Correct Answer + 2</li>
+          <li>wrong Answer - 1 </li>
+          <li>
+            <span>
+              Alert ⚠️ you can't <br /> undone
+            </span>
+          </li>
+        </ul>
+      </div>
+      <div class="BUTTON">
+        <button onclick="changePage('rulesPage','none','question1','flex')">
+          Continue
+        </button>
+        <button onclick="restart()">
+          Home
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question1" class="slides">
+    <div class="questionBox">
+      <span>Question.1</span>
+      <hr />
+      <h3>
+        Which of the following is NOT a commonly used front-end web development language?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="correct">
+          <div class="labels">A.</div> Python
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>CSS
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>HTML
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>JAVA SCRIPT
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home
+        </button>
+        <button onclick="changePage('question2','flex','question1','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question2" class="slides">
+    <div class="questionBox">
+      <span>Question.2</span>
+      <hr />
+      <h3>
+        What is CSS full form?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> Computer style sheet
+        </button>
+        <button class="option" data-answer="correct">
+          <div class="labels">B.</div>Cascading stylesheet
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>Creativ stylesheet
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>Commonly stylesheet
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question3','flex','question2','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question3" class="slides">
+    <div class="questionBox">
+      <span>Question.3</span>
+      <hr />
+      <h3>
+        Which tag is used to create a hyperlink in HTML?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="correct">
+          <div class="labels">A.</div> &lt;a> Tag
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>&lt;h1> Tag
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>&lt;link> Tag
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>&lt;p> Tag
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question4','flex','question3','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question4" class="slides">
+    <div class="questionBox">
+      <span>Question.4</span>
+      <hr />
+      <h3>
+        Which of the following is a JavaScript framework?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> Django
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>Ruby on Rails
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="correct">
+          <div class="labels">C.</div>React
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>.Net
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question5','flex','question4','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question5" class="slides">
+    <div class="questionBox">
+      <span>Question.5</span>
+      <hr />
+      <h3>
+        What does the acronym "DOM" stand for in web development?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> Dynamic object modal
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>Data object modal
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>Digital modal
+        </button>
+        <button class="option" data-answer="correct">
+          <div class="labels">D.</div>Document Object Model
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question6','flex','question5','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question6" class="slides">
+    <div class="questionBox">
+      <span>Question.6</span>
+      <hr />
+      <h3>
+        What is the most recent version of HTML?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> HTML 4
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>XHTML
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="correct">
+          <div class="labels">C.</div>HTML 5
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div> HTML 6
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question7','flex','question6','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question7" class="slides">
+    <div class="questionBox">
+      <span>Question.7</span>
+      <hr />
+      <h3>
+        What is the purpose of the &lt;ol> tag in HTML?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> To show a tabel
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>To show unordered list
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>To show a line
+        </button>
+        <button class="option" data-answer="correct">
+          <div class="labels">D.</div>To show a ordered list
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question8','flex','question7','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question8" class="slides">
+    <div class="questionBox">
+      <span>Question.8</span>
+      <hr />
+      <h3>
+        Which of the following is a popular language for adding interactivity to websites?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="correct">
+          <div class="labels">A.</div> Javascript
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>Python
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>PHP
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>Ruby
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question9','flex','question8','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question9" class="slides">
+    <div class="questionBox">
+      <span>Question.9</span>
+      <hr />
+      <h3>
+        Which of the following is not a web component element?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> &lt;Shadow>
+        </button>
+        <button class="option" data-answer="correct">
+          <div class="labels">B.</div>&lt;Menu>
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">C.</div>&lt;Elements>
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>&lt;Content>
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('question10','flex','question9','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="question10" class="slides">
+    <div class="questionBox">
+      <span>Question.10</span>
+      <hr />
+      <h3>
+        Which of the following is used to read a HTML page and render it?
+      </h3>
+    </div>
+    <div class="shade">
+      <div class="optionRow">
+        <button class="option" data-answer="wrong">
+          <div class="labels">A.</div> Web server
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">B.</div>Web Matrix
+        </button>
+      </div>
+      <div class="optionRow">
+        <button class="option" data-answer="correct">
+          <div class="labels">C.</div>Web browser
+        </button>
+        <button class="option" data-answer="wrong">
+          <div class="labels">D.</div>None of above
+        </button>
+      </div>
+      <div class="BUTTON">
+        <button onclick="restart()">
+          Home🏠
+        </button>
+        <button onclick="changePage('resultPage','flex','question10','none')">
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <div id="resultPage">
+    <h1 id="score"> Your score out of 20 </h1>
+    <img id="ball" src="Ball.png" />
+    <div id="marks">
+    </div>
+    
+    <div class="play">
+    <button onclick="restart()">
+      Play Again
+    </button>
+    <a href="https://uvaishqureshi.github.io/My-Portfolio/">
+      <button>
+        About creator
+      </button>
+    </a>
+  </div>
+    
+  </div>
+  
+  
+  <script src="script.js"> </script>
+</body>
+
+</html>

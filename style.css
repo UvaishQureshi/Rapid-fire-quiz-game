@@ -1,0 +1,302 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#homePage,
+#rulesPage,
+.slides {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -4;
+  width: 100%;
+  min-height: 100vh;
+  max-height: 100vh;
+  background: #7E57C2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.photo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: -50px;
+  animation: mindSlide 0.7s ease-out forwards;
+}
+
+@keyframes mindSlide {
+  to {
+    top: 30px;
+  }
+}
+
+.shade {
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  bottom: 0%;
+  min-width: 100%;
+  background: #9575CD;
+  border-top-right-radius: 40px;
+  border-top-left-radius: 40px;
+  box-shadow: -4px 4px 8px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 80%;
+  height: 200px;
+  background: #fff;
+  border-radius: 20px;
+  transform: rotateX(50);
+  margin-top: -80px;
+  transform: rotateY(20deg) rotateX(10deg) scale(0.5);
+  border: 1px solid black;
+  box-shadow: -10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  color: #7E57C2;
+  animation: pop 1s ease-out forwards;
+}
+
+@keyframes pop {
+  to {
+    transform: rotateY(20deg) rotateX(10deg) scale(1);
+  }
+}
+
+.BUTTON {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  animation: buttonSlide 1s ease-out forwards;
+}
+
+@keyframes buttonSlide {
+  to {
+    bottom: 70px;
+  }
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #7E57C2;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin: 10px;
+  font-weight: bold;
+ -webkit-tap-highlight-color: transparent;
+  box-shadow: -3px 3px 12px 3px rgba(255, 255, 255, 1);
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translatey(6px) scale(0.8);
+}
+
+#rulesPage .card {
+  padding-block: 5px;
+  justify-content: flex-;
+  font-size: 40px;
+}
+
+li span {
+  color: red;
+}
+
+hr {
+  min-width: 100%;
+  border: 1px solid #7E57C2;
+}
+
+.card li {
+  font-size: 25px;
+}
+
+#rulesPage, #resultPage,
+.slides {
+  display: none;
+}
+
+
+.slides .BUTTON {
+  left: 0px;
+  right: 0px;
+  flex-direction: row;
+  animation: slideB 1s ease forwards;
+}
+
+@keyframes slideB {
+  to {
+    bottom: 20px;
+  }
+}
+
+.questionBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 95%;
+  height: 1px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: -5px 5px 10px 2.5px rgba(0, 0, 0, 0.5);
+  animation: questionBox 0.5s ease-in-out forwards;
+}
+
+@keyframes questionBox {
+  to {
+    height: 220px;
+  }
+}
+
+.questionBox h3 {
+  color: #7E57C2;
+  margin-top: 20px;
+}
+
+.questionBox span {
+  font-weight: bold;
+  color: red;
+}
+
+.slides .shade {
+  border-radius: 20px;
+}
+
+.optionRow {
+  display: flex;
+  width: 100%;
+}
+
+.option {
+  background: white;
+  width: 0%;
+  height: 0px;
+  box-shadow: -3px 3px 12px 3px rgba(0, 0, 0, 1);
+  animation: optionspop 0.3s ease forwards;
+}
+
+@keyframes optionspop {
+  to {
+    height: 100px;
+    width: 50%;
+  }
+}
+
+.labels {
+  border-radius: 999px;
+  background: black;
+  color: white;
+  padding: 2px;
+  margin-right: 15px;
+}
+
+.correct {
+  background: lawngreen;
+  color: black;
+}
+
+.wrong {
+  background: red;
+  color: white;
+}
+
+#resultPage {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #B39DDB;
+  width: 100%;
+  height: 100vh;
+}
+
+#marks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0px;
+  height: 0px;
+  background: white;
+  font-size: 50px;
+  font-weight: bold;
+  color: darkred;
+  border-radius: 999px;
+  z-index: 1;
+  animation: result 1s ease-out forwards 0.2s;
+}
+
+@keyframes result {
+  to {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+#ball {
+  width: 0%;
+  position: absolute;
+  z-index: 0.5;
+  animation: ball 1s ease-in-out forwards;
+}
+
+@keyframes ball {
+  to{
+    width: 80%;
+  }
+}
+
+#score {
+  font-size: 30px;
+  position: absolute;
+  top: 80px;
+  transform: scale(0);
+  opacity: 0;
+  animation: score 1s ease-out forwards;
+}
+
+@keyframes score {
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.play {display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: -50px;
+  animation: buttons 1s ease-out forwards;
+  -webkit-tap-highlight-color: transparent;
+}
+ 
+@keyframes buttons {
+  to {
+    bottom: 50px;
+  }
+}
+
