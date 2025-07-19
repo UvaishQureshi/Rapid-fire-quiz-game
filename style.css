@@ -88,14 +88,6 @@
   justify-content: center;
   position: absolute;
   bottom: 80px;
-  transform: translatey(80px);
-  animation: buttonSlide 1s ease-out forwards;
-}
-
-@keyframes buttonSlide {
-  to {
-    transform: translatey(-80px);
-  }
 }
 
 button {
