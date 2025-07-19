@@ -87,14 +87,14 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: 70px;
-  transform: translatey(70px);
+  bottom: 80px;
+  transform: translatey(0px);
   animation: buttonSlide 1s ease-out forwards;
 }
 
 @keyframes buttonSlide {
   to {
-    transform: translatey(0px);
+    transform: translatey(70px);
   }
 }
 
