@@ -89,11 +89,12 @@
   position: absolute;
   bottom: -50px;
   animation: buttonSlide 1s ease-out forwards;
+  background: red;
 }
 
 @keyframes buttonSlide {
   to {
-    bottom: 90px;
+    bottom: 100px;
   }
 }
 
