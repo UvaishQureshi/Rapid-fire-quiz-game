@@ -138,13 +138,6 @@ hr {
   left: 0px;
   right: 0px;
   flex-direction: row;
-  animation: slideB 1s ease forwards;
-}
-
-@keyframes slideB {
-  to {
-    bottom: 20px;
-  }
 }
 
 .questionBox {
