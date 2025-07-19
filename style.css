@@ -87,7 +87,7 @@
   align-items: center;
   justify-content: center;
   position: absolute;
-  bottom: -70px;
+  bottom: 70px;
   transform: translatey(70px);
   animation: buttonSlide 1s ease-out forwards;
 }
